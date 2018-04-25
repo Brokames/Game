@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "Item.h"
 
 using namespace std;
 
@@ -27,32 +28,32 @@ private:
 class Playable: public Entity{
 public:
     Playable(int, int, int, int, int, int, int, int, int, int, Item, Item, Item, const string&);  //initializes characters stats (HP, MP, Str (strength), Spd (speed), Intel(intelligence), Accuracy.
-                                                                                // Also sets the Exp of the character along with their base inventory space
+    // Also sets the Exp of the character along with their base inventory space
     Item GetArmor();
     Item GetOnHand();
     Item GetOffHand();
 protected:
-    Vector<Item*> Inventory(5); //heterogeneous list to point to items in characters inventory
+    vector<Item*> Inventory; //heterogeneous list to point to items in characters inventory
     Item Armor, OnHand, OffHand;
     int AbilityList[4];
 private:
-    int CurrExp, MaxExp, InvSpace, Level;  //CurrExp stores how much exp the characrter currently has, MaxExp stores The exp needed to level up, 
-                                           //,InvSpace stores the current inventory space and Level stores the characters current level
+    int CurrExp, MaxExp, InvSpace, Level;  //CurrExp stores how much exp the characrter currently has, MaxExp stores The exp needed to level up,
+    //,InvSpace stores the current inventory space and Level stores the characters current level
 };
 
 class Warrior: public Playable{
-  public:
-  private:
+public:
+private:
 };
 
 class Mage: public Playable{
-  public:
-  private:
+public:
+private:
 };
 
 class Rogue: public Playable{
-  public:
-  private:
+public:
+private:
 };
 
 class NonPlayable: public Entity{
@@ -69,7 +70,7 @@ private:
 
 class Hostile: public NonPlayable{
 public:
-private:  
+private:
 };
 
-#endif
+#endif //_ENTITY_H
