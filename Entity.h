@@ -19,14 +19,14 @@ public:
     int GetAccuracy();
     int GetDef();
 protected:
-    int MaxHP, MaxMP, Str, Spd, Intel, Accuracy, Def; //stats for characters
+    int MaxHP, MaxMP, Str, Def, Spd, Intel, Accuracy; //stats for characters
 private:
     string Name;
 };
 
 class Playable: public Entity{
 public:
-    Playable(int, int, int, int, int, int, int, int, int, int, item, item, item, const string&);  //initializes characters stats (HP, MP, Str (strength), Spd (speed), Intel(intelligence), Accuracy.
+    Playable(int, int, int, int, int, int, int, int, int, int, Item, Item, Item, const string&);  //initializes characters stats (HP, MP, Str (strength), Spd (speed), Intel(intelligence), Accuracy.
                                                                                 // Also sets the Exp of the character along with their base inventory space
     Item GetArmor();
     Item GetOnHand();
@@ -62,12 +62,12 @@ protected:
 private:
 };
 
-class GoodNPC: public NonPlayable{
+class NonHostile: public NonPlayable{
 public:
 private:
 };
 
-class BadNPC: public NonPlayable{
+class Hostile: public NonPlayable{
 public:
 private:  
 };
