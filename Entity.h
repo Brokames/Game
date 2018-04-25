@@ -14,10 +14,10 @@ public:
     int GetHP();
     int GetMP();
     int GetStr();
+    int GetDef();
     int GetSpd();
     int GetIntel();
     int GetAccuracy();
-    int GetDef();
 protected:
     int MaxHP, MaxMP, Str, Def, Spd, Intel, Accuracy; //stats for characters
 private:
