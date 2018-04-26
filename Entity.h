@@ -46,6 +46,16 @@ protected:
 private:
 };
 
+class Hostile: public NonPlayable{
+public:
+private:
+};
+
+class NonHostile: public NonPlayable{
+public:
+private:
+};
+
 class Warrior: public Playable{
   public:
   private:
