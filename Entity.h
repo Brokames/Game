@@ -29,7 +29,7 @@ class Playable: public Entity{
 public:
     Playable(int, int, int, int, int, int, int, int, int, char, const string&);  //initializes characters stats (HP, MP, Str (strength), Spd (speed), Intel(intelligence), Accuracy.
                                                                            // Also sets the Exp of the character along with their base inventory space
-    void Fight(Entity&);
+    bool Fight(Entity&);      //initiates a fight between player and hostile character. Returns true if player wins, false otherwise
 protected:
     Vector<Item*> Inventory(5); //heterogeneous list to point to items in characters inventory
     Item Armor, OnHand, OffHand;
